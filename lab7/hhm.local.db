@@ -1,0 +1,16 @@
+;
+; Bind data file for hhm.local zone
+;
+$TTL 300
+@	IN	SOA	ns1.hhm.local. harith.hhm.local. (
+			2022041312	; Serial
+			43200		; Refresh
+			3600		; Retry
+			3600000		; Expire
+			300 )		; Negative Cache TTL
+;
+@	IN	NS	ns1.template.lan.
+
+ns1	IN	A	10.0.0.1
+gate	IN	A	10.0.0.1
+www	IN	CNAME	gate.hhm.local.
